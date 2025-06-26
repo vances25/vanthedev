@@ -1,0 +1,212 @@
+.container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+.blob {
+  position: absolute;
+  width: 100vw;     /* slightly larger than viewport */
+  right: -40vw;     /* shift to the right */
+  top: -300px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+.navbar{
+  font-size: 1.3em;
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.navbar div{
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar a:hover{
+  transform: scale(1.05);
+
+}
+
+.action{
+  font-size: 1em;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  gap: 170px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about{
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.program{
+  color: #e6aa00;
+  font-weight: bold;
+}
+
+.action img{
+  width: 500px;
+  transform: rotate(-2deg);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  
+}
+
+.linkTop{
+  display: flex;
+  gap: 20px;
+  
+}
+
+.action button{
+  width: 150px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: black
+}
+
+.action button:hover{
+  transform: scale(1.12);
+}
+
+.linkedin{
+  background-color: #e6aa00;
+  border: 2px black solid;
+
+}
+
+.projects{
+  background-color: #f7f8fd;
+  border: 2px black solid;
+}
+
+.myprojects{
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.projectTitle{
+  text-align: center;
+  border-bottom: 2px #e6aa00 solid;
+  margin-bottom: 10px;
+}
+
+.contactme{
+  margin-top: 50px;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactme p{
+  color: #4d4d4d;
+}
+
+.contactme div{
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.contactme img{
+  width: 80px;
+  transition: transform 0.2s ease-in;
+}
+
+.contactme img:hover{
+  transform: scale(1.05) rotate(2deg);
+  cursor: pointer;
+}
+
+.nameDisplay{
+  display:  flex;
+  flex-direction: column;
+}
+
+
+
+
+@media(max-width: 768px){
+
+  .program{
+    color: black;
+  }
+
+  .navbar{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action{
+    background-color: #e6aa00;
+    overflow: visible;
+    border-radius: 50% 200px;
+    margin-top: 0px;
+  }
+
+  .linkedin{
+    border: 2px black solid;
+  }
+
+  .about{
+    width: 70%;
+  }
+  
+  .blob {
+    display: none;
+  }
+
+  .action{
+    padding: 30px 70px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .action img{
+    width: 250px;
+  }
+
+  .myprojects{
+   margin-top: 75px;
+}
+
+}
