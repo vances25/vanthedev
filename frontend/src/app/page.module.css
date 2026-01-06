@@ -1,212 +1,270 @@
-.container{
+.container {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
 }
 
-
-
+.blobWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
 .blob {
   position: absolute;
-  width: 100vw;     /* slightly larger than viewport */
-  right: -40vw;     /* shift to the right */
+  width: 110vw;
+  right: -40vw;
   top: -300px;
   z-index: -1;
   pointer-events: none;
 }
 
+.bodyText {
+  color: #4d4d4d;
+  line-height: 1.7;
+  max-width: 70ch;
+}
 
-
-.navbar{
-  font-size: 1.3em;
-  padding: 20px;
-  width: 80%;
+.myprojects {
+  width: min(1100px, 90%);
+  margin-top: 140px;
   display: flex;
+  flex-direction: column;
+  gap: 32px;
   align-items: center;
-  justify-content: space-between;
 }
 
-
-
-.navbar div{
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a{
-  text-decoration: none;
-  color: black;
-  transition: transform 0.2s ease-in-out;
-}
-
-.navbar a:hover{
-  transform: scale(1.05);
-
-}
-
-.action{
-  font-size: 1em;
-  margin-top: 30px;
-  overflow: hidden;
+.projectTitle {
   width: 100%;
-  display: flex;
-  gap: 170px;
-  justify-content: center;
-  align-items: center;
-}
-
-.about{
-  max-width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-
-.program{
-  color: #e6aa00;
-  font-weight: bold;
-}
-
-.action img{
-  width: 500px;
-  transform: rotate(-2deg);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  
-}
-
-.linkTop{
-  display: flex;
-  gap: 20px;
-  
-}
-
-.action button{
-  width: 150px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  padding: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  color: black
-}
-
-.action button:hover{
-  transform: scale(1.12);
-}
-
-.linkedin{
-  background-color: #e6aa00;
-  border: 2px black solid;
-
-}
-
-.projects{
-  background-color: #f7f8fd;
-  border: 2px black solid;
-}
-
-.myprojects{
-  margin-top: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.projectTitle{
   text-align: center;
   border-bottom: 2px #e6aa00 solid;
-  margin-bottom: 10px;
+  padding-bottom: 6px;
 }
 
-.contactme{
-  margin-top: 50px;
-  width: 70%;
+.contactme {
+  margin-top: 70px;
+  width: min(900px, 90%);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
-.contactme p{
-  color: #4d4d4d;
-}
-
-.contactme div{
-  margin-top: 30px;
+.contactLinks {
+  margin-top: 26px;
   display: flex;
-  gap: 50px;
+  gap: 46px;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
-.contactme img{
-  width: 80px;
+.contactme img {
+  width: 76px;
   transition: transform 0.2s ease-in;
 }
 
-.contactme img:hover{
-  transform: scale(1.05) rotate(2deg);
+.contactme img:hover {
+  transform: scale(1.06) rotate(2deg);
   cursor: pointer;
 }
 
-.nameDisplay{
-  display:  flex;
+.pricingSection {
+  width: min(1100px, 90%);
+  margin-top: 24px;
+  padding: 14px 0 6px;
+  text-align: center;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
+.sectionTitle {
+  font-size: 2rem;
+  margin: 0 0 18px;
+  position: relative;
+}
 
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #e6aa00;
+  margin: 10px auto 0;
+  border-radius: 999px;
+}
 
+.pricingGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 920px;
+  margin: 0 auto;
+  justify-items: center;
+}
 
-@media(max-width: 768px){
+.priceCard,
+.priceCardHighlight {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+}
 
-  .program{
-    color: black;
+.priceCardHighlight {
+  background: #fff4cf;
+  border: 2px solid #e6aa00;
+}
+
+.priceLabel {
+  margin: 0;
+  font-weight: 800;
+  color: #444;
+}
+
+.priceAmount {
+  margin: 8px 0 6px;
+  font-size: 2.1rem;
+  font-weight: 900;
+}
+
+.priceSub {
+  margin: 0;
+  color: #4d4d4d;
+  line-height: 1.45;
+}
+
+.pricingNote {
+  margin: 16px auto 0;
+  max-width: 70ch;
+  color: #4d4d4d;
+}
+
+.hostingSection {
+  width: min(1100px, 90%);
+  margin-top: 28px;
+  padding: 14px 0 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hostingGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 920px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.hostingCard,
+.hostingCardHighlight {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.10);
+  text-align: left;
+}
+
+.hostingCardHighlight {
+  background: #fff4cf;
+  border: 2px solid #e6aa00;
+}
+
+.hostingTitle {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.hostingList {
+  margin: 0;
+  padding-left: 18px;
+  color: #4d4d4d;
+  line-height: 1.55;
+}
+
+.hostingList li {
+  margin: 8px 0;
+}
+
+.hostingNoteBox {
+  margin: 16px auto 0;
+  max-width: 920px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.hostingNote {
+  margin: 0;
+  max-width: 70ch;
+  color: #4d4d4d;
+  line-height: 1.7;
+  text-align: center;
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .pricingSection {
+    margin-top: 34px;
   }
 
-  .navbar{
-    flex-direction: column;
-    gap: 10px;
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .action{
-    background-color: #e6aa00;
-    overflow: visible;
-    border-radius: 50% 200px;
-    margin-top: 0px;
+  .priceAmount {
+    font-size: 1.9rem;
   }
 
-  .linkedin{
-    border: 2px black solid;
+  .hostingSection {
+    margin-top: 34px;
   }
 
-  .about{
-    width: 70%;
+  .hostingGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  
+
+  .hostingCard,
+  .hostingCardHighlight {
+    padding: 18px;
+  }
+
+  .hostingTitle {
+    text-align: center;
+  }
+
+  .hostingList {
+    text-align: left;
+  }
+
   .blob {
     display: none;
   }
 
-  .action{
-    padding: 30px 70px;
-    flex-direction: column-reverse;
-    gap: 20px;
+  .myprojects {
+    margin-top: 90px;
   }
 
-  .action img{
-    width: 250px;
+  .contactme {
+    margin-top: 60px;
   }
-
-  .myprojects{
-   margin-top: 75px;
-}
-
 }

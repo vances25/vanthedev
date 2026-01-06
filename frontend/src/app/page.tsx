@@ -1,96 +1,139 @@
 "use client";
 
 import styles from "./page.module.css";
-import ProjectItem from "../../componets/ProjectItem/ProjectItem";
-
+import Header from "../componets/Header/Header";
+import ProjectItem from "../componets/ProjectItem/ProjectItem";
+import LandingHero from "../componets/LandingHero/LandingHero";
 
 export default function Home() {
-
-  const randomRotation = () => {
-    const angle = Math.random() > 0.5 ? 5 : -5;
-    return `rotate(${angle}deg) scale(1.05)`;
-  };
-
   return (
     <>
-    <div className={`${styles.blobWrapper}`}>
-      <img className={styles.blob} src="/blob.svg" />
-    </div>
-    <div className={`${styles.container}`}>
+      <div className={styles.blobWrapper}>
+        <img className={styles.blob} src="/blob.svg" alt="" />
+      </div>
 
-      <div className={`${styles.navbar}`}>
-        <p>Vance Schaefer</p>
+      <div className={styles.container}>
+        <Header
+          name="Vance Schaefer"
+          links={[
+            { label: "About", href: "#about" },
+            { label: "Pricing", href: "#pricing" },
+            { label: "Hosting", href: "#hosting" },
+            { label: "Projects", href: "#projects" },
+            { label: "Contacts", href: "#contacts" },
+          ]}
+        />
 
-        <div>
-          <a onMouseEnter={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = randomRotation();
-  }}
-  onMouseLeave={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = "none";
-  }} href="/">About</a>
-          <a onMouseEnter={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = randomRotation();
-  }}
-  onMouseLeave={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = "none";
-  }} href="/#projects">Projects</a>
-          <a onMouseEnter={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = randomRotation();
-  }}
-  onMouseLeave={(e) => {
-    (e.currentTarget as HTMLElement).style.transform = "none";
-  }} href="/#contacts">Contacts</a>
+        <LandingHero />
+
+        <section id="pricing" className={styles.pricingSection}>
+          <h2 className={styles.sectionTitle}>Pricing</h2>
+
+          <div className={styles.pricingGrid}>
+            <div className={styles.priceCard}>
+              <p className={styles.priceLabel}>Landing Pages</p>
+              <p className={styles.priceAmount}>$250–$800</p>
+              <p className={styles.priceSub}>1–3 pages · mobile-friendly · fast load</p>
+            </div>
+
+            <div className={styles.priceCardHighlight}>
+              <p className={styles.priceLabel}>Full-Stack Apps</p>
+              <p className={styles.priceAmount}>$1k–$3k+</p>
+              <p className={styles.priceSub}>auth · database · APIs · deployment help</p>
+            </div>
+          </div>
+
+          <p className={styles.pricingNote}>
+            Want a quick quote? Message me on LinkedIn with what you want built + your timeline.
+          </p>
+        </section>
+
+        <section id="hosting" className={styles.hostingSection}>
+          <h2 className={styles.sectionTitle}>Hosting & Deployment</h2>
+
+          <div className={styles.hostingGrid}>
+            <div className={styles.hostingCard}>
+              <h3 className={styles.hostingTitle}>What you provide</h3>
+              <ul className={styles.hostingList}>
+                <li>Your own VPS/hosting plan (DigitalOcean, Linode, etc.)</li>
+                <li>Your domain name (Namecheap, Cloudflare, GoDaddy, etc.)</li>
+                <li>SSH login access so I can deploy (or we do it together)</li>
+              </ul>
+            </div>
+
+            <div className={styles.hostingCardHighlight}>
+              <h3 className={styles.hostingTitle}>What I do</h3>
+              <ul className={styles.hostingList}>
+                <li>Deploy the site/app to your VPS</li>
+                <li>Set up SSL (HTTPS), server config, and basic hardening</li>
+                <li>Guide you to connect your domain → your server IP (DNS)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.hostingNoteBox}>
+            <p className={styles.hostingNote}>
+              After launch, I’ll handle <b>minor fixes</b> for free (small UI tweaks I missed, quick
+              config adjustments, or updating versions to patch common issues). Bigger feature work
+              is billed separately.
+            </p>
+
+            <p className={styles.hostingNote}>
+              You keep full ownership of the hosting account + domain. I’m just the builder and
+              deployment help.
+            </p>
+          </div>
+        </section>
+
+        <div id="projects" className={styles.myprojects}>
+          <h1 className={styles.projectTitle}>Projects</h1>
+
+          <ProjectItem
+            name="FeedToVote"
+            description={
+              "FeedToVote is a web project exploring how social media feeds shape civic engagement and voter motivation.\n\nI built the site with a clean, modern UI and focused on smooth performance and mobile-first layout.\n\nIt’s designed like a real product: clear sections, strong typography, and an experience that feels fast."
+            }
+            image="/feedtovote.png"
+            link="https://feedtovote.org"
+          />
+
+          <ProjectItem
+            name="SpaceSync"
+            description={
+              "SpaceSync is a collaborative project built to solve time coordination between Earth scientists and astronauts on other planets.\n\nWe created formulas to calculate local time on celestial bodies like Mars or Jupiter using real orbital data and a custom space calendar.\n\nI helped improve frontend UX and collaborated closely with my teammates on design and strategy.\n\nWe built it as part of the NASA HUNCH program and presented it throughout the year, including at reviews with NASA engineers."
+            }
+            image="/spacesync.png"
+            link="https://spacesync-preview.vercel.app"
+          />
         </div>
 
-      </div>
+        <div id="contacts" className={styles.contactme}>
+          <h1 className={styles.projectTitle}>Let's Build Something Together</h1>
 
-      <div className={styles.action}>
+          <p className={styles.bodyText}>
+            I’m currently open to freelance work, internships, or collaborations. If you’re looking
+            for a developer who delivers clean fullstack apps fast, let’s connect.
+            <br />
+            <br />
+            Reach out on Instagram or LinkedIn through the buttons below — I’d love to connect.
+          </p>
 
-        <div className={`${styles.about}`}>
-        <p className={styles.program}>PROGRAMMER</p>
-
-        <div className={styles.nameDisplay}>
-            <h1>Hello, my name is</h1>
-        
-            <h1 className="fadeIn">Vance Schaefer</h1>
-         </div>  
-
-        <p style={{"color": "#4d4d4d"}} className="fadeInFast">I’m a passionate programmer who’s driven by a desire to make real impact not just in companies, but across the world.<br/><br/>I’ve built skills in Next.js for frontend, and FastAPI with Uvicorn to create clean, efficient CRUD APIs. I’ve dabbled in cybersecurity and AI, and I’m eager to go deeper in both fields.<br/><br/>Beyond code, I’ve learned how valuable teamwork is and how ideas grow stronger through collaboration.<br/><br/>I’m always open to working with others, learning together, and building something meaningful. If you’ve got a project, I’m in.</p>
-
-        <div className={styles.linkTop}>
-          <button onClick={() => window.location.href = "/#projects"} className={styles.projects}>Projects</button>
-          <button onClick={()=> window.location.href = "https://www.linkedin.com/in/vance-schaefer-64ba19367/"} className={styles.linkedin}>LinkedIn</button>
-        </div>
-
-      </div>
-     
-      <img className={`${styles.image} fadeSlideIn`} src="/me.png" />
-
-
-      </div>
-
-      <div id="projects" className={styles.myprojects}>
-        <h1 className={styles.projectTitle}>Projects</h1>
-
-        <ProjectItem name="Skipdish" description={"Skipdish is a food truck pre ordering app I built to solve a real world problem.\n\nWhile working at Culver’s, I saw how larger chains use QR codes to let customers order online, but smaller food vendors, like those at state fairs, don’t usually have access to that kind of tech. So instead of building another basic calculator app, I challenged myself to create something more impactful.\n\nSkipdish lets customers scan a code, place orders, and skip the wait, saving food trucks time and reducing the need for extra staff.\n\nI developed the full app and launched a working demo by myself. While it’s not fully deployed due to lack of funding or a team, it taught me a ton and shows what I’m capable of building on my own.\n\nNOTE: When registering please check your spam because gmail flags my domain :("}
-        image="/skipdish.png" link="https://skipdish.org"/>
-
-        <ProjectItem name="SpaceSync" description={"SpaceSync is a collaborative project built to solve time coordination between Earth scientists and astronauts on other planets.\n\nWe created formulas to calculate local time on celestial bodies like Mars or Jupiter using real orbital data and a custom space calendar.\n\nI helped improve frontend UX and collaborated closely with my teammates on design and strategy.\n\nWe built it as part of the NASA HUNCH program and presented it throughout the year, including at reviews with NASA engineers.\n\nThis project taught me the power of teamwork, problem solving, and made space feel a little closer to home."}
-        image="/spacesync.png" link="https://spacesync-preview.vercel.app"/>
-
-      </div>
-
-      <div id="contacts" className={styles.contactme}>
-        <h1 className={styles.projectTitle}>Let's Build Something Together</h1>
-
-        <p>I’m currently open to freelance work, internships, or collaborations. If you’re looking for a developer who delivers clean fullstack apps fast, let’s connect.<br/><br/>Reach out on Instagram or LinkedIn through the buttons below — I’d love to connect.</p>
-        <div>
-          <img onClick={()=>window.location.href = "https://www.instagram.com/vanceschaefer_/"} src="/insta.png"/>
-          <img onClick={()=> window.location.href = "https://www.linkedin.com/in/vance-schaefer-64ba19367/"} src="/link.png"/>
+          <div className={styles.contactLinks}>
+            <img
+              onClick={() => (window.location.href = "https://www.instagram.com/vanceschaefer_/")}
+              src="/insta.png"
+              alt="Instagram"
+            />
+            <img
+              onClick={() =>
+                (window.location.href = "https://www.linkedin.com/in/vance-schaefer-64ba19367/")
+              }
+              src="/link.png"
+              alt="LinkedIn"
+            />
+          </div>
         </div>
       </div>
-
-    </div>
     </>
   );
 }
