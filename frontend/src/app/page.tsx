@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <p className={styles.pricingNote}>
-            Want a quick quote? Message me on LinkedIn with what you want built + your timeline.
+            Want a quick quote? Message me on Instagram with what you want built + your timeline.
           </p>
         </section>
 
