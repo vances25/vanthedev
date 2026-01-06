@@ -1,27 +1,36 @@
-# de3p — Portfolio Website
+# vanthedev.org
 
-Welcome to the personal portfolio site of **de3p**, a developer focused on web development, cybersecurity, and building impactful software. This site showcases selected solo and collaborative projects, and provides a way to connect professionally.
+**vanthedev.org** is my personal developer website and portfolio.  
+It showcases my work, services, pricing, and approach to building clean, fast, modern web applications.
 
-## 🌐 Live Site
-
-[https://yourdomain.xyz](https://yourdomain.xyz) — *Replace with your actual URL*
+The site is designed to feel like a real product — simple, responsive, and performance-focused — while clearly explaining how I work with clients from idea to deployment.
 
 ---
 
 ## ✨ Features
 
-- Highlighted portfolio projects (solo + team)
-- Clean, responsive design
-- Linked social media (e.g., GitHub, LinkedIn, Instagram)
-- Contact / About section
-- Resume or download link (optional)
+- Landing page with a clear overview of my skills and focus
+- Pricing section for common project types
+- Hosting & deployment section explaining responsibilities
+- Project showcase with real, shipped work
+- Contact section for freelance work, internships, and collaborations
+- Fully mobile-responsive design
+- Clean UI with performance in mind
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript / React *(modify if needed)*
-- **Hosting:** Vercel / Netlify / GitHub Pages *(modify if needed)*
-- **Design:** Custom styling or Tailwind / Bootstrap *(if applicable)*
+- Next.js (App Router)
+- React
+- TypeScript
+- CSS Modules
 
 ---
+
+## 🚀 Getting Started
+
+Install dependencies:
+
+```bash
+npm install
