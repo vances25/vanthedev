@@ -47,11 +47,11 @@ export default function LandingHero() {
 
           <a
             className={styles.secondary}
-            href="https://www.linkedin.com/in/vance-schaefer-64ba19367/"
+            href="https://www.instagram.com/vanceschaefer_/"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            Instagram
           </a>
         </div>
       </div>
