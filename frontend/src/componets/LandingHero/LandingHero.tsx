@@ -14,10 +14,10 @@ export default function LandingHero() {
         </h1>
 
         <p className={styles.sub}>
-          I’m Vance — I build <b>Next.js / React</b> frontends and <b>FastAPI</b>{" "}
-          backends. I’m strong with <b>REST APIs</b>, authentication, and databases
-          (especially <b>MongoDB</b>). I care deeply about clean code, performance,
-          and shipping polished UI.
+          I’m Vance — a <b>University of Minnesota</b> student studying{" "}
+          <b>Computer Engineering</b>. I build <b>Next.js / React</b> frontends and{" "}
+          <b>FastAPI</b> backends with a strong focus on clean code, performance,
+          and polished UI.
         </p>
 
         <div className={styles.chips}>
@@ -33,7 +33,7 @@ export default function LandingHero() {
         <p className={styles.sub}>
           I’m currently open to <b>freelance work</b>, <b>internships</b>, and{" "}
           <b>collaborations</b>. If you need a landing page, a full-stack app, or a
-          clean backend API, I can help.
+          clean backend API, I can help bring it to life.
         </p>
 
         <div className={styles.ctaRow}>
@@ -41,7 +41,7 @@ export default function LandingHero() {
             See My Work
           </a>
 
-          <a className={styles.secondary} href="mailto:YOUR_EMAIL_HERE">
+          <a className={styles.secondary} href="mailto:scha1202@umn.edu">
             Email Me
           </a>
 
@@ -54,8 +54,6 @@ export default function LandingHero() {
             LinkedIn
           </a>
         </div>
-
-        {/* FLOATING BUBBLES */}
       </div>
 
       <div className={styles.right}>
