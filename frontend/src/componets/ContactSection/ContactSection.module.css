@@ -115,10 +115,11 @@
 }
 
 .primaryBtn{
-  background: #111;
-  color: #fff;
-  border-color: rgba(0,0,0,0.2);
+  background: #e6aa00;
+  color: #111;
+  border-color: rgba(0,0,0,0.14);
   grid-column: 1 / -1;
+  box-shadow: 0 12px 26px rgba(230,170,0,0.20);
 }
 
 .ghostBtn{
