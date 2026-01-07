@@ -33,7 +33,23 @@ const DEFAULT_ITEMS: TemplateItem[] = [
     "SEO-ready",
     "Image-optimized",
   ],
-}
+},
+{
+    tag: "Landing",
+    title: "Acid Ink",
+    desc: "Bold tattoo studio landing page with artist showcase, services overview, booking flow, aftercare guidance, and contact sections. Designed to feel artistic, modern, and professional without corporate fluff.",
+    price: "$149",
+    demoUrl: "https://acid-ink.vercel.app/",
+    stack: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "CSS Modules",
+      "Responsive",
+      "Sticky Header",
+      "Accessible Nav",
+      "SEO-ready",
+    ],
+  },
 
 ];
 
