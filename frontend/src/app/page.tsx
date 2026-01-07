@@ -4,6 +4,9 @@ import styles from "./page.module.css";
 import Header from "../componets/Header/Header";
 import ProjectItem from "../componets/ProjectItem/ProjectItem";
 import LandingHero from "../componets/LandingHero/LandingHero";
+import Templates from "../componets/Templates/Templates";
+import ContactSection from "../componets/ContactSection/ContactSection";
+import Footer from "@/componets/Footer/Footer";
 
 export default function Home() {
   return (
@@ -47,6 +50,9 @@ export default function Home() {
             Want a quick quote? Message me on Instagram with what you want built + your timeline.
           </p>
         </section>
+
+
+        <Templates />
 
         <section id="hosting" className={styles.hostingSection}>
           <h2 className={styles.sectionTitle}>Hosting & Deployment</h2>
@@ -107,33 +113,17 @@ export default function Home() {
           />
         </div>
 
-        <div id="contacts" className={styles.contactme}>
-          <h1 className={styles.projectTitle}>Let's Build Something Together</h1>
+       
+            <ContactSection
+            email="vanceschaefer@yourdomain.com"
+            instagramUrl="https://www.instagram.com/vanceschaefer_/"
+            linkedinUrl="https://www.linkedin.com/in/vance-schaefer-64ba19367/"
+          />
 
-          <p className={styles.bodyText}>
-            I’m currently open to freelance work, internships, or collaborations. If you’re looking
-            for a developer who delivers clean fullstack apps fast, let’s connect.
-            <br />
-            <br />
-            Reach out on Instagram or LinkedIn through the buttons below — I’d love to connect.
-          </p>
-
-          <div className={styles.contactLinks}>
-            <img
-              onClick={() => (window.location.href = "https://www.instagram.com/vanceschaefer_/")}
-              src="/insta.png"
-              alt="Instagram"
-            />
-            <img
-              onClick={() =>
-                (window.location.href = "https://www.linkedin.com/in/vance-schaefer-64ba19367/")
-              }
-              src="/link.png"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
       </div>
+        
+        <Footer />
+
     </>
   );
 }

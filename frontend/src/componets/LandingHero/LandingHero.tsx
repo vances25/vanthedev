@@ -41,8 +41,8 @@ export default function LandingHero() {
             See My Work
           </a>
 
-          <a className={styles.secondary} href="mailto:scha1202@umn.edu">
-            Email Me
+          <a className={styles.secondary} href="#contacts">
+            Contact Me
           </a>
 
           <a
