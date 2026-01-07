@@ -115,7 +115,7 @@ export default function Home() {
 
        
             <ContactSection
-            email="vanceschaefer@yourdomain.com"
+            email="scha1202@umn.edu"
             instagramUrl="https://www.instagram.com/vanceschaefer_/"
             linkedinUrl="https://www.linkedin.com/in/vance-schaefer-64ba19367/"
           />
