@@ -25,7 +25,7 @@ const DEFAULT_ITEMS: TemplateItem[] = [
   title: "Studio One",
   desc: "Modern tattoo portfolio with hero, filtered gallery, pricing, booking form, and aftercare. Designed to convert visitors into bookings.",
   price: "$179",
-  demoUrl: "https://studio-one-tattoo.vercel.app",
+  demoUrl: "https://studio-one-template.vercel.app",
   stack: [
     "Next.js",
     "CSS Modules",
