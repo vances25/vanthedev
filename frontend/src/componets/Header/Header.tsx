@@ -14,8 +14,8 @@ export default function Header({
   name = "Vance Schaefer",
   links = [
     { label: "About", href: "/" },
-    { label: "Projects", href: "/#projects" },
     { label: "Contacts", href: "/#contacts" },
+    { label: "Projects", href: "/#projects" },
   ],
 }: {
   name?: string;

@@ -24,7 +24,7 @@ const DEFAULT_ITEMS: TemplateItem[] = [
   tag: "Portfolio",
   title: "Studio One",
   desc: "Modern tattoo portfolio with hero, filtered gallery, pricing, booking form, and aftercare. Designed to convert visitors into bookings.",
-  price: "$179",
+  price: "$149",
   demoUrl: "https://studio-one-template.vercel.app",
   stack: [
     "Next.js",
@@ -39,9 +39,9 @@ const DEFAULT_ITEMS: TemplateItem[] = [
 
 export default function Templates({
   id = "templates",
-  heading = "Templates",
+  heading = "Ready-Made Templates",
   subheading =
-    "These are real, ready-to-deploy templates. Pick one you like and I’ll launch it fast with your branding + content.",
+    "Lower-cost, pre-built layouts that can be branded and deployed fast.",
   items = DEFAULT_ITEMS,
 }: Props) {
   return (

@@ -22,57 +22,62 @@ export default function Home() {
             { label: "About", href: "#about" },
             { label: "Pricing", href: "#pricing" },
             { label: "Hosting", href: "#hosting" },
-            { label: "Projects", href: "#projects" },
             { label: "Contacts", href: "#contacts" },
+            { label: "Projects", href: "#projects" },
           ]}
         />
 
         <LandingHero />
 
         <section id="pricing" className={styles.pricingSection}>
-          <h2 className={styles.sectionTitle}>Pricing</h2>
+          <h2 className={styles.sectionTitle}>Custom Pricing</h2>
 
           <div className={styles.pricingGrid}>
             <div className={styles.priceCard}>
-              <p className={styles.priceLabel}>Landing Pages</p>
-              <p className={styles.priceAmount}>$250–$800</p>
-              <p className={styles.priceSub}>1–3 pages · mobile-friendly · fast load</p>
+              <p className={styles.priceLabel}>Custom Landing Pages</p>
+              <p className={styles.priceAmount}>Starting at $250</p>
+              <p className={styles.priceSub}>
+                Designed and built from scratch · tailored layout · brand-focused
+              </p>
             </div>
 
             <div className={styles.priceCardHighlight}>
-              <p className={styles.priceLabel}>Full-Stack Apps</p>
-              <p className={styles.priceAmount}>$1k–$3k+</p>
-              <p className={styles.priceSub}>auth · database · APIs · deployment help</p>
+              <p className={styles.priceLabel}>Custom Web Apps</p>
+              <p className={styles.priceAmount}>Starting at $800+</p>
+              <p className={styles.priceSub}>
+                Built to your exact needs · auth, databases, APIs, and deployment
+              </p>
             </div>
           </div>
 
           <p className={styles.pricingNote}>
-            Want a quick quote? Message me on Instagram with what you want built + your timeline.
-          </p>
+          Looking for something more affordable? Check out the ready-to-deploy templates below.
+          Custom projects are quoted based on scope and timeline.
+        </p>
         </section>
 
 
         <Templates />
 
         <section id="hosting" className={styles.hostingSection}>
-          <h2 className={styles.sectionTitle}>Hosting & Deployment</h2>
+          <h2 className={styles.sectionTitle}>Launch & Hosting Setup</h2>
 
           <div className={styles.hostingGrid}>
             <div className={styles.hostingCard}>
               <h3 className={styles.hostingTitle}>What you provide</h3>
               <ul className={styles.hostingList}>
-                <li>Your own VPS/hosting plan (DigitalOcean, Linode, etc.)</li>
-                <li>Your domain name (Namecheap, Cloudflare, GoDaddy, etc.)</li>
-                <li>SSH login access so I can deploy (or we do it together)</li>
+                <li>Your domain name (or I’ll help you pick one)</li>
+                <li>A hosting option: Vercel (simple) or a VPS like Linode/DigitalOcean</li>
+                <li>Access so I can launch it (invite me on Vercel or share SSH for a VPS)</li>
               </ul>
             </div>
 
             <div className={styles.hostingCardHighlight}>
-              <h3 className={styles.hostingTitle}>What I do</h3>
+             <h3 className={styles.hostingTitle}>What I do</h3>
               <ul className={styles.hostingList}>
-                <li>Deploy the site/app to your VPS</li>
-                <li>Set up SSL (HTTPS), server config, and basic hardening</li>
-                <li>Guide you to connect your domain → your server IP (DNS)</li>
+                <li>Recommend the best option (Vercel vs VPS) based on what you need</li>
+                <li>Deploy the site and make sure it’s fast, secure, and working</li>
+                <li>Connect your domain (DNS) and set up HTTPS</li>
               </ul>
             </div>
           </div>
@@ -84,24 +89,30 @@ export default function Home() {
               is billed separately.
             </p>
 
-            <p className={styles.hostingNote}>
-              You keep full ownership of the hosting account + domain. I’m just the builder and
-              deployment help.
-            </p>
+           <p className={styles.hostingNote}>
+            You own the domain + hosting account (Vercel or VPS). I just guide the setup and handle the launch.
+          </p>
           </div>
         </section>
+
+
+        <ContactSection
+        email="scha1202@umn.edu"
+        instagramUrl="https://www.instagram.com/vanceschaefer_/"
+        linkedinUrl="https://www.linkedin.com/in/vance-schaefer-64ba19367/"
+      />
 
         <div id="projects" className={styles.myprojects}>
           <h1 className={styles.projectTitle}>Projects</h1>
 
           <ProjectItem
-            name="FeedToVote"
-            description={
-              "FeedToVote is a web project exploring how social media feeds shape civic engagement and voter motivation.\n\nI built the site with a clean, modern UI and focused on smooth performance and mobile-first layout.\n\nIt’s designed like a real product: clear sections, strong typography, and an experience that feels fast."
-            }
-            image="/feedtovote.png"
-            link="https://feedtovote.org"
-          />
+          name="FeedToVote"
+          description={
+            "FeedToVote began as a research-based school project exploring how social media feeds influence civic engagement and voter motivation.\n\nAfter completing extensive research and writing a formal paper on the topic, the final requirement was to present the findings in a clear, public-facing format. I chose to turn it into a fully designed website.\n\nI built the site with a clean, modern UI and a mobile-first layout, focusing on readability, structure, and performance so the research could be explored like a real product rather than a static assignment."
+          }
+          image="/feedtovote.png"
+          link="https://feedtovote.org"
+        />
 
           <ProjectItem
             name="SpaceSync"
@@ -112,13 +123,6 @@ export default function Home() {
             link="https://spacesync-preview.vercel.app"
           />
         </div>
-
-       
-            <ContactSection
-            email="scha1202@umn.edu"
-            instagramUrl="https://www.instagram.com/vanceschaefer_/"
-            linkedinUrl="https://www.linkedin.com/in/vance-schaefer-64ba19367/"
-          />
 
       </div>
         

@@ -30,7 +30,7 @@
 
 .myprojects {
   width: min(1100px, 90%);
-  margin-top: 140px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 32px;
