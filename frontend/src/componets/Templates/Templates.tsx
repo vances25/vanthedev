@@ -50,6 +50,23 @@ const DEFAULT_ITEMS: TemplateItem[] = [
       "SEO-ready",
     ],
   },
+    {
+    tag: "Business",
+    title: "Workline",
+    desc: "High-conversion auto repair website with hero background, services, trust sections, clear pricing, and combined booking + contact flow. Built to feel trustworthy, fast, and professional for local service businesses.",
+    price: "$149",
+    demoUrl: "https://workline-olive.vercel.app/",
+    stack: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "CSS Modules",
+      "Responsive",
+      "Sticky Header",
+      "Smooth Scrolling",
+      "Booking + Contact Flow",
+      "SEO-ready",
+    ],
+  },
 
 ];
 
