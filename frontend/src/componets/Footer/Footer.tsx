@@ -26,14 +26,15 @@ export default function Footer({
           <div className={styles.brand}>
             <h3 className={styles.name}>{name}</h3>
             <p className={styles.tagline}>
-              Full-stack developer building clean, fast, modern web apps.
+              Computer Engineering student focused on offensive security and
+              embedded hardware.
             </p>
           </div>
 
           <div className={styles.links}>
             <a href="#about">About</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#templates">Templates</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contacts">Contact</a>
           </div>
@@ -48,7 +49,6 @@ export default function Footer({
 
         <div className={styles.bottom}>
           <span>© {year} {name}</span>
-
         </div>
       </div>
     </footer>

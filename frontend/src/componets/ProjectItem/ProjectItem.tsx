@@ -18,7 +18,9 @@ export default function ProjectItem({ name, description, link, image  }: Props){
                 <p style={{ whiteSpace: "pre-line" }}>{description}</p>
                 <button onClick={()=> window.location.href = link}>View Project</button>
             </div>
-            <img src={image}></img>
+            <div className={styles.imageWrap}>
+                <img src={image} alt={name} />
+            </div>
         </div>
         </>
     )

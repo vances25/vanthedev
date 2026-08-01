@@ -6,265 +6,44 @@
   align-items: center;
 }
 
-.blobWrapper {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.blob {
-  position: absolute;
-  width: 110vw;
-  right: -40vw;
-  top: -300px;
-  z-index: -1;
-  pointer-events: none;
-}
-
 .bodyText {
-  color: #4d4d4d;
+  color: var(--text-dim);
   line-height: 1.7;
   max-width: 70ch;
 }
 
 .myprojects {
   width: min(1100px, 90%);
-  margin-top: 70px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 32px;
   align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.promptChar {
+  color: var(--accent);
+  margin-right: 6px;
 }
 
 .projectTitle {
   width: 100%;
   text-align: center;
-  border-bottom: 2px #e6aa00 solid;
-  padding-bottom: 6px;
-}
-
-.contactme {
-  margin-top: 70px;
-  width: min(900px, 90%);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.contactLinks {
-  margin-top: 26px;
-  display: flex;
-  gap: 46px;
-  margin-bottom: 50px;
-  justify-content: center;
-}
-
-.contactme img {
-  width: 76px;
-  transition: transform 0.2s ease-in;
-}
-
-.contactme img:hover {
-  transform: scale(1.06) rotate(2deg);
-  cursor: pointer;
-}
-
-.pricingSection {
-  width: min(1100px, 90%);
-  margin-top: 24px;
-  padding: 14px 0 6px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sectionTitle {
   font-size: 2rem;
-  margin: 0 0 18px;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: #e6aa00;
-  margin: 10px auto 0;
-  border-radius: 999px;
-}
-
-.pricingGrid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 22px;
-  max-width: 920px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.priceCard,
-.priceCardHighlight {
-  width: 100%;
-  max-width: 440px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
-  border-radius: 22px;
-  padding: 26px;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
-}
-
-.priceCardHighlight {
-  background: #fff4cf;
-  border: 2px solid #e6aa00;
-}
-
-.priceLabel {
-  margin: 0;
-  font-weight: 800;
-  color: #444;
-}
-
-.priceAmount {
-  margin: 8px 0 6px;
-  font-size: 2.1rem;
-  font-weight: 900;
-}
-
-.priceSub {
-  margin: 0;
-  color: #4d4d4d;
-  line-height: 1.45;
-}
-
-.pricingNote {
-  margin: 16px auto 0;
-  max-width: 70ch;
-  color: #4d4d4d;
-}
-
-.hostingSection {
-  width: min(1100px, 90%);
-  margin-top: 28px;
-  padding: 14px 0 6px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hostingGrid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 22px;
-  max-width: 920px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.hostingCard,
-.hostingCardHighlight {
-  width: 100%;
-  max-width: 440px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.10);
-  text-align: left;
-}
-
-.hostingCardHighlight {
-  background: #fff4cf;
-  border: 2px solid #e6aa00;
-}
-
-.hostingTitle {
-  margin: 0 0 10px;
-  font-size: 1.1rem;
-  font-weight: 900;
-}
-
-.hostingList {
-  margin: 0;
-  padding-left: 18px;
-  color: #4d4d4d;
-  line-height: 1.55;
-}
-
-.hostingList li {
-  margin: 8px 0;
-}
-
-.hostingNoteBox {
-  margin: 16px auto 0;
-  max-width: 920px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.hostingNote {
-  margin: 0;
-  max-width: 70ch;
-  color: #4d4d4d;
-  line-height: 1.7;
-  text-align: center;
-  justify-self: center;
+  margin: 0 0 8px;
+  color: var(--text);
 }
 
 @media (max-width: 768px) {
-  .pricingSection {
-    margin-top: 34px;
-  }
-
-  .pricingGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .priceAmount {
-    font-size: 1.9rem;
-  }
-
-  .hostingSection {
-    margin-top: 34px;
-  }
-
-  .hostingGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hostingCard,
-  .hostingCardHighlight {
-    padding: 18px;
-  }
-
-  .hostingTitle {
-    text-align: center;
-  }
-
-  .hostingList {
-    text-align: left;
-  }
-
-  .blob {
-    display: none;
-  }
-
   .myprojects {
-    margin-top: 90px;
-  }
-
-  .contactme {
     margin-top: 60px;
   }
 }

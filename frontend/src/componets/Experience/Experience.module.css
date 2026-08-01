@@ -1,0 +1,100 @@
+.section {
+  width: min(1100px, 90%);
+  margin-top: 60px;
+  padding: 14px 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.promptChar {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin: 0 0 30px;
+  color: var(--text);
+}
+
+.timeline {
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.card,
+.cardHighlight {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 22px 24px;
+}
+
+.cardHighlight {
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 0 30px rgba(14, 168, 86, 0.1);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.role {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.org {
+  margin: 4px 0 12px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 40px;
+  }
+
+  .card,
+  .cardHighlight {
+    padding: 18px;
+  }
+}

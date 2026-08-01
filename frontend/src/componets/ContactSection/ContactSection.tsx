@@ -13,39 +13,42 @@ type Props = {
 
 export default function ContactSection({
   id = "contacts",
-  heading = "Let’s Build Something Together",
-  subheading = "Tell me what you want. I’ll reply with a quick plan + quote.",
+  heading = "Let’s Talk",
+  subheading = "Open to internships and collaborations in cybersecurity and computer engineering.",
   instagramUrl = "https://www.instagram.com/vanceschaefer_/",
   linkedinUrl = "https://www.linkedin.com/in/vance-schaefer-64ba19367/",
   email = "scha1202@umn.edu",
 }: Props) {
   const mailto = `mailto:${email}?subject=${encodeURIComponent(
-    "Website / template project"
+    "Internship / opportunity"
   )}&body=${encodeURIComponent(
-    `Hey Vance,\n\nI’m interested in:\n- Template: (name)\n- Pages/sections:\n- Brand/colors:\n- Deadline:\n- Budget:\n\nDetails:\n`
+    `Hey Vance,\n\nReaching out about:\n\n`
   )}`;
 
   return (
     <section id={id} className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
+          <p className={styles.eyebrow}>
+            <span className={styles.promptChar}>$</span> ./contact --init
+          </p>
           <h2 className={styles.title}>{heading}</h2>
           <p className={styles.sub}>{subheading}</p>
         </div>
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Fast start</h3>
+            <h3 className={styles.cardTitle}>What I&apos;m looking for</h3>
             <ul className={styles.list}>
-              <li>Pick a template you like</li>
-              <li>Send your logo/colors + copy</li>
-              <li>I deploy it and connect your domain</li>
+              <li>Internships in cybersecurity or computer engineering</li>
+              <li>CTF teams, research groups, and hardware collaborations</li>
+              <li>Freelance web/full-stack work on the side</li>
             </ul>
 
             <div className={styles.badges}>
-              <span className={styles.badge}>Template-ready</span>
-              <span className={styles.badge}>Mobile-first</span>
-              <span className={styles.badge}>Deployed for you</span>
+              <span className={styles.badge}>Security</span>
+              <span className={styles.badge}>Embedded/HW</span>
+              <span className={styles.badge}>Full-stack</span>
             </div>
           </div>
 
@@ -88,7 +91,7 @@ export default function ContactSection({
         </div>
 
         <p className={styles.footerLine}>
-          If you already picked a template, include the name + your timeline.
+          Based in Minneapolis, MN. Usually replies within a day or two.
         </p>
       </div>
     </section>
